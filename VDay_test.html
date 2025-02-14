@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post-Valentine's Invite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #8cbfd1;
+            margin: 0;
+            padding: 0;
+        }
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #183748;
+        }
+        .emoji {
+            font-size: 2em;
+        }
+        .options {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-top: 5px;
+        }
+        .option {
+            background: #fade5f;
+            color: black;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            border: none;
+            font-size: 1em;
+        }
+        .option:hover {
+            background: #fbc02d;
+        }
+        .bigger {
+            transform: scale(1.3);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const movieButton = document.querySelector('.option:first-child');
+            const gameButton = document.querySelector('.option:last-child');
+            
+            movieButton.addEventListener('click', selectMovieNight);
+            gameButton.addEventListener('click', selectGameNight);
+        });
+
+        function selectMovieNight() {
+            // Make game night button bigger
+            document.querySelector('.option:last-child').classList.add('bigger');
+        }
+        
+        function selectGameNight() {
+            window.location.href = 'Gamenight_test.html';
+        }
+    </script>    
+</head>
+<body>
+    <div class="card">
+        <h1>Delayed Valentine's Vibes</h1>
+        <p>This or That?💖</p>
+        <img src="https://media.giphy.com/media/l4pTrTloKKGvNCfCg/giphy.gif?cid=790b7611m0dekk0ytcdjqzrgwrb4c2lv4l2sz5lc8dgmqjjq&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Valentine's Vibes GIF" style="width:100%; border-radius:10px;">
+        <p><strong>When:</strong> Saturday, Feb 15</p>
+        <p><strong>Where:</strong> Our place</p>
+        <p>Pick your vibe for the night:</p>
+        <div class="options">
+            <div class="option">🎥 Movie Night</div>
+            <div class="option">🎲 Game Night</div>
+        </div>
+        <p>Let me know what you're in for! 💌</p>
+    </div>
+</body>
+</html>
